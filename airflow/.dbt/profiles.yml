@@ -5,7 +5,7 @@ postgres_project:
       host: postgres
       pass: postgres
       port: 5432
-      schema: raw
+      schema: model
       threads: 1
       type: postgres
       user: postgres

@@ -1,9 +1,10 @@
 WITH raw_products as (
-    select * from raw.products
+    select * from {{ source('airflow','raw_products') }}
 )
 SELECT
  product_id ,
  product_name ,
  category ,
- price
+ price,
+ current_date date_load
  FROM raw_products

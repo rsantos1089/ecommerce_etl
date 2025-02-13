@@ -12,7 +12,3 @@ pip install pytest==8.3.4
 cd airflow
 docker build . --tag extending-airflow:latest
 docker-compose up -d
-
-docker exec -it 2fa454942400 psql -U postgres
-
-docker run --name postgres-db -p 5433:5432 -e POSTGRES_USER=airflow -e POSTGRES_PASSWORD=airflow -e POSTGRES_DB=airflow -d postgres

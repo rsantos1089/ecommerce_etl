@@ -1,0 +1,14 @@
+version: 1
+
+sources:
+  - name: airflow
+    schema: raw
+    tables:
+      - name: raw_products
+        identifier: products
+
+      - name: raw_orders
+        identifier: orders
+
+      - name: raw_order_items
+        identifier: order_items

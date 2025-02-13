@@ -32,4 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   postgres_project:
     +materialized: view
+    sources:
+      +materialized: ephemeral
+
+
     # Config indicated by + and applies to all files under models/example/

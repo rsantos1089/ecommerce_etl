@@ -1,0 +1,47 @@
+[2025-02-13T05:39:43.787+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-13T05:39:43.812+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transform_data_dag.dbt_run manual__2025-02-13T05:39:42.153909+00:00 [queued]>
+[2025-02-13T05:39:43.822+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transform_data_dag.dbt_run manual__2025-02-13T05:39:42.153909+00:00 [queued]>
+[2025-02-13T05:39:43.824+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-02-13T05:39:43.841+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): dbt_run> on 2025-02-13 05:39:42.153909+00:00
+[2025-02-13T05:39:43.850+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1953) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-13T05:39:43.852+0000] {standard_task_runner.py:72} INFO - Started process 1954 to run task
+[2025-02-13T05:39:43.852+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'transform_data_dag', 'dbt_run', 'manual__2025-02-13T05:39:42.153909+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/transform_data_dag.py', '--cfg-path', '/tmp/tmpmkmn6597']
+[2025-02-13T05:39:43.855+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask dbt_run
+[2025-02-13T05:39:43.877+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-13T05:39:43.917+0000] {task_command.py:467} INFO - Running <TaskInstance: transform_data_dag.dbt_run manual__2025-02-13T05:39:42.153909+00:00 [running]> on host 89bb8c6379b5
+[2025-02-13T05:39:43.983+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/utils/log/secrets_masker.py:84 DeprecationWarning: The sensitive_variable_fields option in [admin] has been moved to the sensitive_var_conn_names option in [core] - the old setting has been used, but please update your config.
+[2025-02-13T05:39:44.017+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='transform_data_dag' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-02-13T05:39:42.153909+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-13T05:39:42.153909+00:00'
+[2025-02-13T05:39:44.018+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-13T05:39:44.038+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-13T05:39:44.042+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dags/dbt/***_project && dbt run']
+[2025-02-13T05:39:44.050+0000] {subprocess.py:99} INFO - Output:
+[2025-02-13T05:39:46.609+0000] {subprocess.py:106} INFO - [0m05:39:46  Running with dbt=1.8.7
+[2025-02-13T05:39:46.936+0000] {subprocess.py:106} INFO - [0m05:39:46  Registered adapter: ***=1.9.0
+[2025-02-13T05:39:47.175+0000] {subprocess.py:106} INFO - [0m05:39:47  Unable to do partial parsing because a project config has changed
+[2025-02-13T05:39:48.693+0000] {subprocess.py:106} INFO - [0m05:39:48  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2025-02-13T05:39:48.694+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2025-02-13T05:39:48.694+0000] {subprocess.py:106} INFO - - models.***_project.products
+[2025-02-13T05:39:48.843+0000] {subprocess.py:106} INFO - [0m05:39:48  Found 4 models, 429 macros
+[2025-02-13T05:39:48.847+0000] {subprocess.py:106} INFO - [0m05:39:48
+[2025-02-13T05:39:48.984+0000] {subprocess.py:106} INFO - [0m05:39:48  Concurrency: 1 threads (target='dev')
+[2025-02-13T05:39:48.985+0000] {subprocess.py:106} INFO - [0m05:39:48
+[2025-02-13T05:39:48.997+0000] {subprocess.py:106} INFO - [0m05:39:48  1 of 4 START sql view model raw.sources_order_items ............................ [RUN]
+[2025-02-13T05:39:49.231+0000] {subprocess.py:106} INFO - [0m05:39:49  1 of 4 OK created sql view model raw.sources_order_items ....................... [[32mCREATE VIEW[0m in 0.23s]
+[2025-02-13T05:39:49.234+0000] {subprocess.py:106} INFO - [0m05:39:49  2 of 4 START sql view model raw.sources_orders ................................. [RUN]
+[2025-02-13T05:39:49.318+0000] {subprocess.py:106} INFO - [0m05:39:49  2 of 4 OK created sql view model raw.sources_orders ............................ [[32mCREATE VIEW[0m in 0.08s]
+[2025-02-13T05:39:49.321+0000] {subprocess.py:106} INFO - [0m05:39:49  3 of 4 START sql view model raw.sources_products ............................... [RUN]
+[2025-02-13T05:39:49.410+0000] {subprocess.py:106} INFO - [0m05:39:49  3 of 4 OK created sql view model raw.sources_products .......................... [[32mCREATE VIEW[0m in 0.09s]
+[2025-02-13T05:39:49.414+0000] {subprocess.py:106} INFO - [0m05:39:49  4 of 4 START sql incremental model raw.products ................................ [RUN]
+[2025-02-13T05:39:49.631+0000] {subprocess.py:106} INFO - [0m05:39:49  4 of 4 OK created sql incremental model raw.products ........................... [[32mINSERT 0 0[0m in 0.21s]
+[2025-02-13T05:39:49.651+0000] {subprocess.py:106} INFO - [0m05:39:49
+[2025-02-13T05:39:49.652+0000] {subprocess.py:106} INFO - [0m05:39:49  Finished running 3 view models, 1 incremental model in 0 hours 0 minutes and 0.80 seconds (0.80s).
+[2025-02-13T05:39:49.729+0000] {subprocess.py:106} INFO - [0m05:39:49
+[2025-02-13T05:39:49.730+0000] {subprocess.py:106} INFO - [0m05:39:49  [32mCompleted successfully[0m
+[2025-02-13T05:39:49.731+0000] {subprocess.py:106} INFO - [0m05:39:49
+[2025-02-13T05:39:49.732+0000] {subprocess.py:106} INFO - [0m05:39:49  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[2025-02-13T05:39:50.464+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-13T05:39:50.495+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-13T05:39:50.496+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=transform_data_dag, task_id=dbt_run, run_id=manual__2025-02-13T05:39:42.153909+00:00, execution_date=20250213T053942, start_date=20250213T053943, end_date=20250213T053950
+[2025-02-13T05:39:50.543+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-13T05:39:50.559+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-13T05:39:50.561+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

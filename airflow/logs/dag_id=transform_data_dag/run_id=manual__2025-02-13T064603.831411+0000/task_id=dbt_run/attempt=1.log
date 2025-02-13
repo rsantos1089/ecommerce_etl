@@ -1,0 +1,37 @@
+[2025-02-13T06:46:05.966+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-13T06:46:05.990+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transform_data_dag.dbt_run manual__2025-02-13T06:46:03.831411+00:00 [queued]>
+[2025-02-13T06:46:06.001+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transform_data_dag.dbt_run manual__2025-02-13T06:46:03.831411+00:00 [queued]>
+[2025-02-13T06:46:06.003+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-02-13T06:46:06.018+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): dbt_run> on 2025-02-13 06:46:03.831411+00:00
+[2025-02-13T06:46:06.026+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3583) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-13T06:46:06.028+0000] {standard_task_runner.py:72} INFO - Started process 3584 to run task
+[2025-02-13T06:46:06.026+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'transform_data_dag', 'dbt_run', 'manual__2025-02-13T06:46:03.831411+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/transform_data_dag.py', '--cfg-path', '/tmp/tmpubkbzaay']
+[2025-02-13T06:46:06.029+0000] {standard_task_runner.py:105} INFO - Job 36: Subtask dbt_run
+[2025-02-13T06:46:06.047+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-13T06:46:06.082+0000] {task_command.py:467} INFO - Running <TaskInstance: transform_data_dag.dbt_run manual__2025-02-13T06:46:03.831411+00:00 [running]> on host 89bb8c6379b5
+[2025-02-13T06:46:06.144+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/utils/log/secrets_masker.py:84 DeprecationWarning: The sensitive_variable_fields option in [admin] has been moved to the sensitive_var_conn_names option in [core] - the old setting has been used, but please update your config.
+[2025-02-13T06:46:06.179+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='transform_data_dag' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-02-13T06:46:03.831411+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-13T06:46:03.831411+00:00'
+[2025-02-13T06:46:06.180+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-13T06:46:06.198+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-13T06:46:06.199+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dags/dbt/***_project && dbt run']
+[2025-02-13T06:46:06.208+0000] {subprocess.py:99} INFO - Output:
+[2025-02-13T06:46:08.601+0000] {subprocess.py:106} INFO - [0m06:46:08  Running with dbt=1.8.7
+[2025-02-13T06:46:08.925+0000] {subprocess.py:106} INFO - [0m06:46:08  Registered adapter: ***=1.9.0
+[2025-02-13T06:46:09.825+0000] {subprocess.py:106} INFO - [0m06:46:09  Found 4 models, 3 sources, 429 macros
+[2025-02-13T06:46:09.829+0000] {subprocess.py:106} INFO - [0m06:46:09
+[2025-02-13T06:46:09.948+0000] {subprocess.py:106} INFO - [0m06:46:09  Concurrency: 1 threads (target='dev')
+[2025-02-13T06:46:09.949+0000] {subprocess.py:106} INFO - [0m06:46:09
+[2025-02-13T06:46:10.023+0000] {subprocess.py:106} INFO - [0m06:46:10  1 of 1 START sql incremental model model.products .............................. [RUN]
+[2025-02-13T06:46:10.316+0000] {subprocess.py:106} INFO - [0m06:46:10  1 of 1 OK created sql incremental model model.products ......................... [[32mINSERT 0 16[0m in 0.29s]
+[2025-02-13T06:46:10.333+0000] {subprocess.py:106} INFO - [0m06:46:10
+[2025-02-13T06:46:10.334+0000] {subprocess.py:106} INFO - [0m06:46:10  Finished running 1 incremental model in 0 hours 0 minutes and 0.50 seconds (0.50s).
+[2025-02-13T06:46:10.409+0000] {subprocess.py:106} INFO - [0m06:46:10
+[2025-02-13T06:46:10.410+0000] {subprocess.py:106} INFO - [0m06:46:10  [32mCompleted successfully[0m
+[2025-02-13T06:46:10.410+0000] {subprocess.py:106} INFO - [0m06:46:10
+[2025-02-13T06:46:10.411+0000] {subprocess.py:106} INFO - [0m06:46:10  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2025-02-13T06:46:11.317+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-13T06:46:11.348+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-13T06:46:11.349+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=transform_data_dag, task_id=dbt_run, run_id=manual__2025-02-13T06:46:03.831411+00:00, execution_date=20250213T064603, start_date=20250213T064605, end_date=20250213T064611
+[2025-02-13T06:46:11.396+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-13T06:46:11.414+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-13T06:46:11.417+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
