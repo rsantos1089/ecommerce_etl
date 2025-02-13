@@ -1,0 +1,87 @@
+[0m03:23:44.189531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5104df3110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f51046e8800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5104df1850>]}
+
+
+============================== 03:23:44.197857 | 204851f5-c7f7-4908-9b9c-ce045caca1ef ==============================
+[0m03:23:44.197857 [info ] [MainThread]: Running with dbt=1.8.7
+[0m03:23:44.199044 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/home/airflow/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init postgres_project', 'send_anonymous_usage_stats': 'True'}
+[0m03:23:44.210846 [debug] [MainThread]: Starter project path: /home/airflow/.local/lib/python3.12/site-packages/dbt/include/starter_project
+[0m03:23:44.216827 [info ] [MainThread]: 
+Your new dbt project "postgres_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m03:23:44.218016 [info ] [MainThread]: Setting up your profile.
+[0m03:25:33.397489 [info ] [MainThread]: Profile postgres_project written to /home/airflow/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m03:25:33.399508 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 109.28532, "process_user_time": 2.339334, "process_kernel_time": 0.321282, "process_mem_max_rss": "106736", "process_out_blocks": "2256", "process_in_blocks": "0"}
+[0m03:25:33.400775 [debug] [MainThread]: Command `dbt init` succeeded at 03:25:33.400570 after 109.29 seconds
+[0m03:25:33.401757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f510554a810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f51051ae930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f510602e450>]}
+[0m03:25:33.402742 [debug] [MainThread]: Flushing usage events
+[0m03:26:52.358165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd452689fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd451d764b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd45483bc80>]}
+
+
+============================== 03:26:52.366654 | 6f9942d7-552e-4a42-8d07-e7d11810ed2b ==============================
+[0m03:26:52.366654 [info ] [MainThread]: Running with dbt=1.8.7
+[0m03:26:52.367933 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m03:26:52.377351 [info ] [MainThread]: dbt version: 1.8.7
+[0m03:26:52.378359 [info ] [MainThread]: python version: 3.12.9
+[0m03:26:52.379216 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m03:26:52.380087 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m03:26:52.458994 [info ] [MainThread]: Using profiles dir at /home/airflow/.dbt
+[0m03:26:52.460382 [info ] [MainThread]: Using profiles.yml file at /home/airflow/.dbt/profiles.yml
+[0m03:26:52.461371 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt_project.yml
+[0m03:26:52.462662 [info ] [MainThread]: adapter type: postgres
+[0m03:26:52.463577 [info ] [MainThread]: adapter version: 1.9.0
+[0m03:26:52.464619 [info ] [MainThread]: Configuration:
+[0m03:26:52.465564 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m03:26:52.466427 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m03:26:52.467363 [info ] [MainThread]: Required dependencies:
+[0m03:26:52.468296 [debug] [MainThread]: Executing "git --help"
+[0m03:26:52.471099 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m03:26:52.472072 [info ] [MainThread]: Connection:
+[0m03:26:52.473135 [info ] [MainThread]:   host: postgres
+[0m03:26:52.474152 [info ] [MainThread]:   port: 5432
+[0m03:26:52.475093 [info ] [MainThread]:   user: postgres
+[0m03:26:52.476203 [info ] [MainThread]:   database: airflow
+[0m03:26:52.477600 [info ] [MainThread]:   schema: raw
+[0m03:26:52.478851 [info ] [MainThread]:   connect_timeout: 10
+[0m03:26:52.479813 [info ] [MainThread]:   role: None
+[0m03:26:52.480704 [info ] [MainThread]:   search_path: None
+[0m03:26:52.481649 [info ] [MainThread]:   keepalives_idle: 0
+[0m03:26:52.482504 [info ] [MainThread]:   sslmode: None
+[0m03:26:52.483604 [info ] [MainThread]:   sslcert: None
+[0m03:26:52.484675 [info ] [MainThread]:   sslkey: None
+[0m03:26:52.485695 [info ] [MainThread]:   sslrootcert: None
+[0m03:26:52.486842 [info ] [MainThread]:   application_name: dbt
+[0m03:26:52.487924 [info ] [MainThread]:   retries: 1
+[0m03:26:52.489177 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m03:26:52.605630 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m03:26:52.650366 [debug] [MainThread]: Using postgres connection "debug"
+[0m03:26:52.651401 [debug] [MainThread]: On debug: select 1 as id
+[0m03:26:52.652251 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:26:52.658773 [debug] [MainThread]: SQL status: SELECT 1 in 0.006 seconds
+[0m03:26:52.660690 [debug] [MainThread]: On debug: Close
+[0m03:26:52.661627 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m03:26:52.662728 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m03:26:52.663962 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </opt/airflow/dbt_project.yml> not found
+
+[0m03:26:52.665154 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m03:26:52.667116 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.37823018, "process_user_time": 2.436195, "process_kernel_time": 0.160407, "process_mem_max_rss": "113420", "process_in_blocks": "1448", "command_success": false, "process_out_blocks": "0"}
+[0m03:26:52.668119 [debug] [MainThread]: Command `dbt debug` failed at 03:26:52.667960 after 0.38 seconds
+[0m03:26:52.669026 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m03:26:52.669968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd455cef140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd452c23c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd452c23ad0>]}
+[0m03:26:52.670915 [debug] [MainThread]: Flushing usage events

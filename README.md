@@ -16,7 +16,7 @@ Tools needed to work the proccess:
 - Install pycharm following the next link https://www.jetbrains.com/help/pycharm/installation-guide.html
 - Install dbeaver following the next link https://dbeaver.io/download/
 
-After the installation of tools run the follow command in pycharm environment `bash ./process.sh`.  
+After the installation of tools run the follow command in pycharm environment `./process.sh`.  
 When the script finished , run the follow command to check if the components are ready `docker ps`  
 
 Example of docker ps output
@@ -26,6 +26,9 @@ After that we need to open the web and type `localhost:8080`
 User : airflow , password: airflow
 ![airflow-web](./images/airflow-web.png)
 
+Add the postgres configuration like below image 
+![postgres-airflow](./images/postgres_airflow.png)
+
 Verified the postgres connection since dbeaver and set the following values:
 #### user : airflow 
 #### password : airflow 
@@ -33,3 +36,11 @@ Verified the postgres connection since dbeaver and set the following values:
 #### port : 5433 
 
 ![postgres-connection](./images/postgres-connection.png)
+
+## Execution
+
+The solution contains the follow components:
+- Airflow : Schedule task to extract data from csv and load in postgres
+- DBT : Modeling and tranform the data
+- Postgres : Database that store the data for analysis
+![architecture](./images/architecture.png) 

@@ -15,6 +15,7 @@ x-airflow-common:
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ./airflow.cfg:/opt/airflow/airflow.cfg
+    - ./.dbt:/home/airflow/.dbt
 
 services:
   postgres:

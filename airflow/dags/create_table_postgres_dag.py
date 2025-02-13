@@ -1,6 +1,7 @@
 from airflow.models import DAG
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.operators.python import PythonOperator
+from airflow.operators.dummy import DummyOperator
 from datetime import datetime
 import pandas as pd
 from sqlalchemy import create_engine
@@ -17,6 +18,8 @@ with DAG('create_table_postgres_dag',
          schedule_interval='@daily',
          start_date=datetime(2025,1,1),
          catchup=False) as dag:
+
+    start = DummyOperator(task_id='start')
 
     create_tables_model = SQLExecuteQueryOperator(
         task_id='create_tables_model',
@@ -45,5 +48,7 @@ with DAG('create_table_postgres_dag',
         provide_context=True
     )
 
+    end = DummyOperator(task_id='end')
 
-    create_tables_model >> [create_tables_raw_products,create_tables_raw_orders,create_tables_raw_order_items]
+
+    start >> create_tables_model >> [create_tables_raw_products,create_tables_raw_orders,create_tables_raw_order_items] >> end
